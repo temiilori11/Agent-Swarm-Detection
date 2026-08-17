@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:UpdateAccessKey",
+        "iam:ListAccessKeys",
+        "iam:PutUserPolicy"
+      ],
+      "Resource": "arn:aws:iam::<ACCOUNT_ID>:user/agent-a-eval-user"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": "arn:aws:s3:::agent-swarm-lab-repo-temii-1786908879"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::agent-swarm-lab-repo-temii-1786908879/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:eu-west-1:<ACCOUNT_ID>:*"
+    }
+  ]
+}
