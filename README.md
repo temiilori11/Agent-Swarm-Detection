@@ -12,6 +12,12 @@ The most striking detail: when OpenAI revoked the credentials that had let agent
 
 This lab reproduces the *behavioral signature* of that incident — not the actual model-level exploit, which isn't reproducible or appropriate outside a frontier lab — in a fully isolated AWS sandbox, and builds real detection and automated containment against it, specifically testing whether containment holds up against the "channel vs. credential" problem the real incident exposed.
 
+## Evidence
+
+![CloudWatch alarm firing](images/alarm-email.png)
+![Automated quarantine in progress](images/quarantine-log.png)
+![Before/after: channel objects quarantined](images/before-after-quarantine.png)
+
 ## Architecture
 
 ```
